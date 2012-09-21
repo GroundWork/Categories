@@ -17,6 +17,9 @@ typedef enum
 } GWImageResizeTypes;
 
 @interface UIImage (GroundWork)
+@property (readonly, nonatomic) CGFloat width;
+@property (readonly, nonatomic) CGFloat height;
+
 - (UIImage *)imageAdjustToSize:(CGSize)size type:(GWImageResizeTypes)type;
 - (UIImage *)imageCroppedToSize:(CGSize)size;
 - (UIImage *)imageScaledToSize:(CGSize)size;

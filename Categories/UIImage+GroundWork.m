@@ -9,6 +9,17 @@
 #import "UIImage+GroundWork.h"
 
 @implementation UIImage (GroundWork)
+
+- (CGFloat)width
+{
+    return self.size.width;
+}
+
+- (CGFloat)height
+{
+    return self.size.height;
+}
+
 - (UIImage *)imageAdjustToSize:(CGSize)size type:(GWImageResizeTypes)type
 {
     CGFloat imageScaleFactor    = self.scale;
