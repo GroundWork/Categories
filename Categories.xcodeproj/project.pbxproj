@@ -8,8 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		08E81395160CB9240000882E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E81394160CB9240000882E /* Foundation.framework */; };
-		08E8139A160CB9250000882E /* Categories.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08E81399160CB9250000882E /* Categories.h */; };
-		08E8139C160CB9250000882E /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E8139B160CB9250000882E /* Categories.m */; };
+		08E8139A160CB9250000882E /* GWCategories.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 08E81399160CB9250000882E /* GWCategories.h */; };
+		08E813B0160CBA270000882E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E813AF160CBA270000882E /* QuartzCore.framework */; };
+		08E813B3160CBAF70000882E /* UIView+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813B2160CBAF70000882E /* UIView+GroundWork.m */; };
+		08E813B6160CBB000000882E /* UILabel+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813B5160CBB000000882E /* UILabel+GroundWork.m */; };
+		08E813B9160CBB0B0000882E /* UIImage+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813B8160CBB0B0000882E /* UIImage+GroundWork.m */; };
+		08E813BC160CBB1A0000882E /* UIGestureRecognizer+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813BB160CBB1A0000882E /* UIGestureRecognizer+GroundWork.m */; };
+		08E813BF160CBB210000882E /* UIColor+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813BE160CBB210000882E /* UIColor+GroundWork.m */; };
+		08E813C2160CBB2B0000882E /* UIControl+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813C1160CBB2B0000882E /* UIControl+GroundWork.m */; };
+		08E813C5160CBB350000882E /* UIButton+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813C4160CBB350000882E /* UIButton+GroundWork.m */; };
+		08E813C8160CBB3F0000882E /* UIAlertView+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813C7160CBB3F0000882E /* UIAlertView+GroundWork.m */; };
+		08E813CB160CBB490000882E /* NSString+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813CA160CBB490000882E /* NSString+GroundWork.m */; };
+		08E813CE160CBB510000882E /* NSObject+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813CD160CBB510000882E /* NSObject+GroundWork.m */; };
+		08E813D1160CBB5B0000882E /* NSDictionary+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813D0160CBB5B0000882E /* NSDictionary+GroundWork.m */; };
+		08E813D4160CBB630000882E /* NSData+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813D3160CBB630000882E /* NSData+GroundWork.m */; };
+		08E813D7160CBB6A0000882E /* NSArray+GroundWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E813D6160CBB6A0000882E /* NSArray+GroundWork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,7 +32,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				08E8139A160CB9250000882E /* Categories.h in CopyFiles */,
+				08E8139A160CB9250000882E /* GWCategories.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,8 +42,34 @@
 		08E81391160CB9240000882E /* libCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCategories.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E81394160CB9240000882E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		08E81398160CB9250000882E /* Categories-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Categories-Prefix.pch"; sourceTree = "<group>"; };
-		08E81399160CB9250000882E /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
-		08E8139B160CB9250000882E /* Categories.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		08E81399160CB9250000882E /* GWCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWCategories.h; sourceTree = "<group>"; };
+		08E813AF160CBA270000882E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		08E813B1160CBAF70000882E /* UIView+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GroundWork.h"; sourceTree = "<group>"; };
+		08E813B2160CBAF70000882E /* UIView+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GroundWork.m"; sourceTree = "<group>"; };
+		08E813B4160CBB000000882E /* UILabel+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GroundWork.h"; sourceTree = "<group>"; };
+		08E813B5160CBB000000882E /* UILabel+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GroundWork.m"; sourceTree = "<group>"; };
+		08E813B7160CBB0B0000882E /* UIImage+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GroundWork.h"; sourceTree = "<group>"; };
+		08E813B8160CBB0B0000882E /* UIImage+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GroundWork.m"; sourceTree = "<group>"; };
+		08E813BA160CBB1A0000882E /* UIGestureRecognizer+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+GroundWork.h"; sourceTree = "<group>"; };
+		08E813BB160CBB1A0000882E /* UIGestureRecognizer+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+GroundWork.m"; sourceTree = "<group>"; };
+		08E813BD160CBB210000882E /* UIColor+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GroundWork.h"; sourceTree = "<group>"; };
+		08E813BE160CBB210000882E /* UIColor+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GroundWork.m"; sourceTree = "<group>"; };
+		08E813C0160CBB2B0000882E /* UIControl+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GroundWork.h"; sourceTree = "<group>"; };
+		08E813C1160CBB2B0000882E /* UIControl+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GroundWork.m"; sourceTree = "<group>"; };
+		08E813C3160CBB350000882E /* UIButton+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GroundWork.h"; sourceTree = "<group>"; };
+		08E813C4160CBB350000882E /* UIButton+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GroundWork.m"; sourceTree = "<group>"; };
+		08E813C6160CBB3F0000882E /* UIAlertView+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+GroundWork.h"; sourceTree = "<group>"; };
+		08E813C7160CBB3F0000882E /* UIAlertView+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+GroundWork.m"; sourceTree = "<group>"; };
+		08E813C9160CBB490000882E /* NSString+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GroundWork.h"; sourceTree = "<group>"; };
+		08E813CA160CBB490000882E /* NSString+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GroundWork.m"; sourceTree = "<group>"; };
+		08E813CC160CBB510000882E /* NSObject+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GroundWork.h"; sourceTree = "<group>"; };
+		08E813CD160CBB510000882E /* NSObject+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GroundWork.m"; sourceTree = "<group>"; };
+		08E813CF160CBB5B0000882E /* NSDictionary+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+GroundWork.h"; sourceTree = "<group>"; };
+		08E813D0160CBB5B0000882E /* NSDictionary+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+GroundWork.m"; sourceTree = "<group>"; };
+		08E813D2160CBB630000882E /* NSData+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GroundWork.h"; sourceTree = "<group>"; };
+		08E813D3160CBB630000882E /* NSData+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GroundWork.m"; sourceTree = "<group>"; };
+		08E813D5160CBB6A0000882E /* NSArray+GroundWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+GroundWork.h"; sourceTree = "<group>"; };
+		08E813D6160CBB6A0000882E /* NSArray+GroundWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GroundWork.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E813B0160CBA270000882E /* QuartzCore.framework in Frameworks */,
 				08E81395160CB9240000882E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +105,7 @@
 		08E81393160CB9240000882E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08E813AF160CBA270000882E /* QuartzCore.framework */,
 				08E81394160CB9240000882E /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -73,8 +114,20 @@
 		08E81396160CB9250000882E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				08E81399160CB9250000882E /* Categories.h */,
-				08E8139B160CB9250000882E /* Categories.m */,
+				08E813AE160CBA020000882E /* UIView */,
+				08E813AD160CB9FF0000882E /* UILabel */,
+				08E813AC160CB9FC0000882E /* UIImage */,
+				08E813AB160CB9F30000882E /* UIGestureRecognizer */,
+				08E813AA160CB9EF0000882E /* UIColor */,
+				08E813A9160CB9EB0000882E /* UIControl */,
+				08E813A8160CB9E60000882E /* UIButton */,
+				08E813A7160CB9DC0000882E /* UIAlertView */,
+				08E813A6160CB9D80000882E /* NSString */,
+				08E813A5160CB9D40000882E /* NSObject */,
+				08E813A4160CB9D00000882E /* NSDictionary */,
+				08E813A3160CB9CC0000882E /* NSData */,
+				08E813A2160CB9C70000882E /* NSArray */,
+				08E81399160CB9250000882E /* GWCategories.h */,
 				08E81397160CB9250000882E /* Supporting Files */,
 			);
 			path = Categories;
@@ -86,6 +139,123 @@
 				08E81398160CB9250000882E /* Categories-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08E813A2160CB9C70000882E /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				08E813D5160CBB6A0000882E /* NSArray+GroundWork.h */,
+				08E813D6160CBB6A0000882E /* NSArray+GroundWork.m */,
+			);
+			name = NSArray;
+			sourceTree = "<group>";
+		};
+		08E813A3160CB9CC0000882E /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				08E813D2160CBB630000882E /* NSData+GroundWork.h */,
+				08E813D3160CBB630000882E /* NSData+GroundWork.m */,
+			);
+			name = NSData;
+			sourceTree = "<group>";
+		};
+		08E813A4160CB9D00000882E /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				08E813CF160CBB5B0000882E /* NSDictionary+GroundWork.h */,
+				08E813D0160CBB5B0000882E /* NSDictionary+GroundWork.m */,
+			);
+			name = NSDictionary;
+			sourceTree = "<group>";
+		};
+		08E813A5160CB9D40000882E /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				08E813CC160CBB510000882E /* NSObject+GroundWork.h */,
+				08E813CD160CBB510000882E /* NSObject+GroundWork.m */,
+			);
+			name = NSObject;
+			sourceTree = "<group>";
+		};
+		08E813A6160CB9D80000882E /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				08E813C9160CBB490000882E /* NSString+GroundWork.h */,
+				08E813CA160CBB490000882E /* NSString+GroundWork.m */,
+			);
+			name = NSString;
+			sourceTree = "<group>";
+		};
+		08E813A7160CB9DC0000882E /* UIAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				08E813C6160CBB3F0000882E /* UIAlertView+GroundWork.h */,
+				08E813C7160CBB3F0000882E /* UIAlertView+GroundWork.m */,
+			);
+			name = UIAlertView;
+			sourceTree = "<group>";
+		};
+		08E813A8160CB9E60000882E /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				08E813C3160CBB350000882E /* UIButton+GroundWork.h */,
+				08E813C4160CBB350000882E /* UIButton+GroundWork.m */,
+			);
+			name = UIButton;
+			sourceTree = "<group>";
+		};
+		08E813A9160CB9EB0000882E /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				08E813C0160CBB2B0000882E /* UIControl+GroundWork.h */,
+				08E813C1160CBB2B0000882E /* UIControl+GroundWork.m */,
+			);
+			name = UIControl;
+			sourceTree = "<group>";
+		};
+		08E813AA160CB9EF0000882E /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				08E813BD160CBB210000882E /* UIColor+GroundWork.h */,
+				08E813BE160CBB210000882E /* UIColor+GroundWork.m */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
+		08E813AB160CB9F30000882E /* UIGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				08E813BA160CBB1A0000882E /* UIGestureRecognizer+GroundWork.h */,
+				08E813BB160CBB1A0000882E /* UIGestureRecognizer+GroundWork.m */,
+			);
+			name = UIGestureRecognizer;
+			sourceTree = "<group>";
+		};
+		08E813AC160CB9FC0000882E /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				08E813B7160CBB0B0000882E /* UIImage+GroundWork.h */,
+				08E813B8160CBB0B0000882E /* UIImage+GroundWork.m */,
+			);
+			name = UIImage;
+			sourceTree = "<group>";
+		};
+		08E813AD160CB9FF0000882E /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				08E813B4160CBB000000882E /* UILabel+GroundWork.h */,
+				08E813B5160CBB000000882E /* UILabel+GroundWork.m */,
+			);
+			name = UILabel;
+			sourceTree = "<group>";
+		};
+		08E813AE160CBA020000882E /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				08E813B1160CBAF70000882E /* UIView+GroundWork.h */,
+				08E813B2160CBAF70000882E /* UIView+GroundWork.m */,
+			);
+			name = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +309,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08E8139C160CB9250000882E /* Categories.m in Sources */,
+				08E813B3160CBAF70000882E /* UIView+GroundWork.m in Sources */,
+				08E813B6160CBB000000882E /* UILabel+GroundWork.m in Sources */,
+				08E813B9160CBB0B0000882E /* UIImage+GroundWork.m in Sources */,
+				08E813BC160CBB1A0000882E /* UIGestureRecognizer+GroundWork.m in Sources */,
+				08E813BF160CBB210000882E /* UIColor+GroundWork.m in Sources */,
+				08E813C2160CBB2B0000882E /* UIControl+GroundWork.m in Sources */,
+				08E813C5160CBB350000882E /* UIButton+GroundWork.m in Sources */,
+				08E813C8160CBB3F0000882E /* UIAlertView+GroundWork.m in Sources */,
+				08E813CB160CBB490000882E /* NSString+GroundWork.m in Sources */,
+				08E813CE160CBB510000882E /* NSObject+GroundWork.m in Sources */,
+				08E813D1160CBB5B0000882E /* NSDictionary+GroundWork.m in Sources */,
+				08E813D4160CBB630000882E /* NSData+GroundWork.m in Sources */,
+				08E813D7160CBB6A0000882E /* NSArray+GroundWork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
