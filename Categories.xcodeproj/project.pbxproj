@@ -85,6 +85,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0832DAD5161A773F0042716F /* NSURLConnection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NSURLConnection;
+			sourceTree = "<group>";
+		};
 		08E81386160CB9240000882E = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +121,7 @@
 		08E81396160CB9250000882E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				0832DAD5161A773F0042716F /* NSURLConnection */,
 				08E813AE160CBA020000882E /* UIView */,
 				08E813AD160CB9FF0000882E /* UILabel */,
 				08E813AC160CB9FC0000882E /* UIImage */,
@@ -417,6 +425,7 @@
 				08E813A1160CB9250000882E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

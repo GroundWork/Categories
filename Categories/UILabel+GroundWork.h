@@ -10,7 +10,7 @@
 
 @interface UILabel (GroundWork)
 - (void)alignToTop;
-- (void)alignTpBottom;
+- (void)alignToBottom;
 - (void)sizeToFitFixedWidth:(NSInteger)width;
 - (void)adjustHeightForString:(NSString *)string;
 - (void)adjustHeightForText;

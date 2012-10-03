@@ -17,4 +17,5 @@
 - (NSString *)summarizeString:(NSInteger)length;
 - (NSString*)stringByTruncatingToWidth:(CGFloat)width withFont:(UIFont *)font;
 + (NSString *)uuid;
++ (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)format;
 @end

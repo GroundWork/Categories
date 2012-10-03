@@ -238,4 +238,13 @@
     
 	return result;
 }
+
++ (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:format];
+    
+    return [dateFormatter stringFromDate:date];
+}
+
 @end
