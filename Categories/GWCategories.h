@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 GroundWork. All rights reserved.
 //
 
-#ifdef __GW_CATEGORIES__
+#ifndef __GW_CATEGORIES__
 #define __GW_CATEGORIES__
 
 #import "NSArray+GroundWork.h"
