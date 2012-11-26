@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (GroundWork)
+@dynamic gradientBackgroundColors;
 #pragma mark - Getters
 
 - (CGPoint)origin
@@ -173,5 +174,17 @@
     return rasterizedView;
 }
 
-
+- (void)setGradientBackgroundColors:(NSArray *)gradientColors
+{
+    NSMutableArray *withColor = [NSMutableArray array];
+    [gradientColors enumerateObjectsUsingBlock:^(UIColor *obj, NSUInteger idx, BOOL *stop) {
+        [withColor addObject:(id)(obj).CGColor];
+    }];
+    
+    CAGradientLayer *gradientLayer  = [[CAGradientLayer alloc] init];
+    gradientLayer.colors            = [NSArray arrayWithArray:withColor];
+    gradientLayer.frame             = self.bounds;
+    
+    [self.layer addSublayer:gradientLayer];
+}
 @end

@@ -9,6 +9,19 @@
 #import "NSDictionary+GroundWork.h"
 
 @implementation NSDictionary (GroundWork)
+@dynamic httpQueryString;
+
+- (NSString *)httpQueryString
+{
+    NSMutableArray *query = [NSMutableArray array];
+    
+    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [query addObject:[NSString stringWithFormat:@"%@=%@", key, obj]];
+    }];
+    
+    return [query componentsJoinedByString:@"&"];
+}
+
 + (NSDictionary *) dictionaryFromJSONString:(NSString *)jsonString
 {
     NSError *error = nil;

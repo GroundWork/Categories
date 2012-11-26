@@ -9,6 +9,8 @@
 
 
 @interface NSDictionary (GroundWork)
+@property (readonly, nonatomic) NSString *httpQueryString;
+
 + (NSDictionary *)dictionaryFromJSONString:(NSString *)jsonString;
 + (NSDictionary *)dictionaryWithContentsOfJSONURLString:(NSString *)url;
 
