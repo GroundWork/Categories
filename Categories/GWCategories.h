@@ -21,5 +21,5 @@
 #import "UIGestureRecognizer+GroundWork.h"
 #import "UILabel+GroundWork.h"
 #import "UIView+GroundWork.h"
-
+#import "UIImage+GroundWork.h"
 #endif

@@ -8,9 +8,46 @@
 
 #import "UIView+GroundWork.h"
 #import <QuartzCore/QuartzCore.h>
+#import <objc/runtime.h>
+
+NSShadow *NSShadowCreate(CGSize offset, UIColor *color, CGFloat radius, NSInteger opacity)
+{
+    return [NSShadow shadowWithOffset:offset color:color radius:radius opacity:opacity];
+}
+
+@implementation NSShadow(GroundWork)
+@dynamic opacity;
+
+- (void)setOpacity:(NSInteger)opacity
+{
+    NSNumber *opacityNumber = @(opacity);
+    objc_setAssociatedObject(self, "NSSHADOW_OPACITY_PROPERTY", opacityNumber, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSInteger)opacity
+{
+    NSNumber *opacityNumber = (NSNumber *)objc_getAssociatedObject(self, "NSSHADOW_OPACITY_PROPERTY");
+    
+    return [opacityNumber integerValue];
+}
+
++ (NSShadow *)shadowWithOffset:(CGSize)offset color:(UIColor *)color radius:(CGFloat)radius opacity:(NSInteger)opacity
+{
+    NSShadow *shadow        = [[NSShadow alloc] init];
+    shadow.shadowOffset     = offset;
+    shadow.shadowColor      = color;
+    shadow.shadowBlurRadius = radius;
+    
+    [shadow setOpacity:opacity];
+    
+    return shadow;
+}
+@end
 
 @implementation UIView (GroundWork)
 @dynamic gradientBackgroundColors;
+@dynamic shadow;
+
 #pragma mark - Getters
 
 - (CGPoint)origin
@@ -187,4 +224,18 @@
     
     [self.layer addSublayer:gradientLayer];
 }
+
+- (void)setShadow:(NSShadow *)shadow
+{
+    CGPathRef path = CGPathCreateWithRect(self.bounds, NULL);
+    
+    self.layer.shadowPath       = path;
+    self.layer.shadowColor      = [(UIColor *)shadow.shadowColor CGColor];
+    self.layer.shadowOffset     = shadow.shadowOffset;
+    self.layer.shadowOpacity    = shadow.opacity;
+    self.layer.shadowRadius     = shadow.shadowBlurRadius;
+    
+    CGPathRelease(path);
+}
+
 @end

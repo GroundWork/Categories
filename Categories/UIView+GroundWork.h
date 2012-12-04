@@ -6,6 +6,13 @@
 //  Copyright (c) 2012 GroundWork. All rights reserved.
 //
 
+@interface NSShadow(GroundWork)
+@property (readwrite, nonatomic) NSInteger opacity;
++ (NSShadow *)shadowWithOffset:(CGSize)offset color:(UIColor *)color radius:(CGFloat)radius opacity:(NSInteger)opacity;
+@end
+
+const NSShadow *NSShadowCreate(CGSize offset, UIColor *color, CGFloat radius, NSInteger opacity);
+
 @interface UIView (GroundWork)
 @property (nonatomic)           CGPoint   origin;
 @property (nonatomic)           CGSize    size;
@@ -21,6 +28,7 @@
 @property (nonatomic)           CGFloat   borderWidth;
 @property (nonatomic, strong)   UIColor   *borderColor;
 @property (assign, nonatomic)   NSArray   *gradientBackgroundColors;
+@property (nonatomic)           NSShadow  *shadow;
 
 - (UIImage *)rasterizedToImage;
 
