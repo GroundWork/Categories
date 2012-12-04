@@ -11,7 +11,7 @@
 + (NSShadow *)shadowWithOffset:(CGSize)offset color:(UIColor *)color radius:(CGFloat)radius opacity:(NSInteger)opacity;
 @end
 
-const NSShadow *NSShadowCreate(CGSize offset, UIColor *color, CGFloat radius, NSInteger opacity);
+NSShadow *NSShadowCreate(CGSize offset, UIColor *color, CGFloat radius, NSInteger opacity);
 
 @interface UIView (GroundWork)
 @property (nonatomic)           CGPoint   origin;
