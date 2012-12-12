@@ -13,6 +13,8 @@
 
 NSShadow *NSShadowCreate(CGSize offset, UIColor *color, CGFloat radius, NSInteger opacity);
 
+typedef void(^GWDrawRectBlock) (CGRect rect);
+
 @interface UIView (GroundWork)
 @property (nonatomic)           CGPoint   origin;
 @property (nonatomic)           CGSize    size;
@@ -31,5 +33,5 @@ NSShadow *NSShadowCreate(CGSize offset, UIColor *color, CGFloat radius, NSIntege
 @property (nonatomic)           NSShadow  *shadow;
 
 - (UIImage *)rasterizedToImage;
-
++ (UIView *)viewWithFrame:(CGRect)rect drawRect:(GWDrawRectBlock)block;
 @end

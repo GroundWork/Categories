@@ -15,6 +15,20 @@ NSShadow *NSShadowCreate(CGSize offset, UIColor *color, CGFloat radius, NSIntege
     return [NSShadow shadowWithOffset:offset color:color radius:radius opacity:opacity];
 }
 
+@interface GWBlockUIView : UIView
+@property (copy, nonatomic) GWDrawRectBlock block;
+@end
+
+@implementation GWBlockUIView
+
+- (void)drawRect:(CGRect)rect
+{
+    if(self.block)
+        self.block(rect);
+}
+
+@end
+
 @implementation NSShadow(GroundWork)
 @dynamic opacity;
 
@@ -236,6 +250,14 @@ NSShadow *NSShadowCreate(CGSize offset, UIColor *color, CGFloat radius, NSIntege
     self.layer.shadowRadius     = shadow.shadowBlurRadius;
     
     CGPathRelease(path);
+}
+
++ (UIView *)viewWithFrame:(CGRect)rect drawRect:(GWDrawRectBlock)block
+{
+    GWBlockUIView *view = [[GWBlockUIView alloc] initWithFrame:rect];
+    view.block = [block copy];
+    
+    return view;
 }
 
 @end
