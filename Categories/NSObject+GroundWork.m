@@ -30,4 +30,23 @@
         });
     });    
 }
+
+- (void)executeBlock:(GWBlock)block afterDelay:(NSTimeInterval)delay
+{
+    int64_t delta = (int64_t)(1.0e9 * delay);
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delta);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        block(self);
+    });
+}
+
++ (void)executeBlock:(GWBlock)block afterDelay:(NSTimeInterval)delay
+{
+    int64_t delta = (int64_t)(1.0e9 * delay);
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delta);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        block(nil);
+    });
+}
+
 @end

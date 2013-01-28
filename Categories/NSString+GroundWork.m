@@ -12,7 +12,11 @@
 @implementation NSString (GroundWork)
 - (NSString *)URLEncode
 {
-    return (__bridge NSString*)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)self, NULL,(CFStringRef)@":/=,!$&'()*+;[]@#?",  kCFStringEncodingUTF8);
+    CFStringRef strRef = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)self, NULL,(CFStringRef)@":/=,!$&'()*+;[]@#?",  kCFStringEncodingUTF8);
+    NSString *returnString = (__bridge NSString *)strRef;
+    CFRelease(strRef);
+    
+    return returnString;
 }
 
 - (NSString *)escapeHTML

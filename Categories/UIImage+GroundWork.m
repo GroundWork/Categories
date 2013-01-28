@@ -54,7 +54,7 @@
     if (cropping)
     {
         destRect = CGRectMake(0, 0, targetWidth, targetHeight);
-        CGFloat destX, destY;
+        CGFloat destX = 0, destY = 0;
         if (type == GWImageResizeCrop)
         {
             destX = round((scaledWidth - targetWidth) / 2.0);

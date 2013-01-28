@@ -34,4 +34,5 @@ typedef void(^GWDrawRectBlock) (CGRect rect);
 
 - (UIImage *)rasterizedToImage;
 + (UIView *)viewWithFrame:(CGRect)rect drawRect:(GWDrawRectBlock)block;
+
 @end
